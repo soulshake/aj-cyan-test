@@ -5,3 +5,4 @@ script: sudo docker pull ubuntu
 env:
   - FOO=foo
   - FOO=bar
+  - bang=baz
