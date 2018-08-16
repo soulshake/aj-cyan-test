@@ -1,4 +1,7 @@
 language: bash
 services:
   - docker
-script: docker pull ubuntu
+script: sudo docker pull ubuntu
+env:
+  - FOO=foo
+  - FOO=bar
