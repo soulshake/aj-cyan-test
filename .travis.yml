@@ -2,9 +2,9 @@ language: bash
 #dist: precise
 #services:
   #- docker
-env:
-  - DOCKER_HOST=10.0.0.12:4243
-  - DOCKER_HOST=10.0.0.11:4243
+#env:
+  #- DOCKER_HOST=10.0.0.12:4243
+  #- DOCKER_HOST=10.0.0.11:4243
 
 install:
   - sudo apt-get update
