@@ -2,8 +2,19 @@ language: bash
 #dist: precise
 services:
   - docker
-script: sudo docker pull ubuntu
 env:
   - FOO=foo
   - FOO=bar
   - bang=baz
+
+install:
+  - sudo apt-get update
+  - sudo apt-get install -y curl software-properties-common apt-transport-https ca-certificates
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty stable"
+  - sudo apt-get update
+  - sudo apt-get install -y docker-ce
+  - sudo docker -H 10.0.0.11:4243 pull ubuntu
+
+script:
+  - sudo docker -H 10.0.0.11:4243 run ubuntu date
