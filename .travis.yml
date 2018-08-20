@@ -1,5 +1,5 @@
 language: bash
-dist: precise
+#dist: precise
 services:
   - docker
 script: sudo docker pull ubuntu
